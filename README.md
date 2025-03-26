@@ -14,11 +14,12 @@ algoroot-frontend/
 │   │   └── signup/page.tsx
 │   ├── dashboard/
 │   │   └── page.tsx
+|   ├── favicon.ico
+|   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 │
 ├── components/
-│   ├── auth/
 │   ├── dashboard/
 │   │   ├── Navbar.tsx
 │   │   ├── Sidebar.tsx
@@ -31,10 +32,6 @@ algoroot-frontend/
 │
 ├── lib/
 │   └── utils.ts
-├── styles/
-│   └── globals.css
-├── public/
-│   └── favicon.ico
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
