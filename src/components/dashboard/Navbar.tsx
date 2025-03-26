@@ -21,7 +21,7 @@ export default function Navbar() {
     // Remove the currently logged-in user from the users array
     const updatedUsers = users.filter((u: { email: string }) => u.email !== user?.email);
 
-    // Update the local storage
+    // Update local storage
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     // Clear current user session and redirect to signup
@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4 bg-gray-100 shadow-md relative">
       {/* Logo */}
-      <h1 className="text-xl font-bold">MyBank</h1>
+      <h1 className="text-lg sm:text-2xl font-bold">MyBank</h1>
 
       {/* User Icon with Dropdown */}
       {user && (
@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Dropdown Menu */}
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-md p-2 z-10">
-              <p className="text-gray-700 font-medium mb-2">{user.email}</p>
+              <p className="text-gray-700 font-medium mb-2 truncate">{user.email}</p>
               <button
                 onClick={handleLogout}
                 className="block w-full text-left text-red-500 hover:bg-gray-100 px-2 py-1 rounded"
