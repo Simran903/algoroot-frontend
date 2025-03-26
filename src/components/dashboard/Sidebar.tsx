@@ -28,13 +28,7 @@ export default function Sidebar({ mobile, onClose }: { mobile?: boolean, onClose
         <h2 className="text-lg font-semibold mt-8 md:mt-0">Sidebar</h2>
         <ul className="mt-4">
           <li className="py-2 hover:bg-gray-300 rounded transition">
-            <a href="#" className="block px-2">Dashboard</a>
-          </li>
-          <li className="py-2 hover:bg-gray-300 rounded transition">
-            <a href="#" className="block px-2">Transactions</a>
-          </li>
-          <li className="py-2 hover:bg-gray-300 rounded transition">
-            <a href="#" className="block px-2">Account Settings</a>
+            <a href="#" className="block px-2">Details</a>
           </li>
         </ul>
       </aside>
