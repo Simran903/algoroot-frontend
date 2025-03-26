@@ -15,16 +15,12 @@ export default function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) 
   };
 
   const handleDeleteAccount = () => {
-    // Fetch all registered users from local storage
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     
-    // Remove the currently logged-in user from the users array
     const updatedUsers = users.filter((u: { email: string }) => u.email !== user?.email);
     
-    // Update local storage
     localStorage.setItem("users", JSON.stringify(updatedUsers));
     
-    // Clear current user session and redirect to signup
     logout();
     router.push("/signup");
     alert("Account deleted successfully!");
@@ -32,7 +28,7 @@ export default function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) 
 
   return (
     <nav className="flex justify-between items-center p-4 bg-gray-100 shadow-md relative">
-      {/* Mobile Menu Toggle */}
+
       <button 
         className="md:hidden mr-4"
         onClick={onMenuToggle}
@@ -40,10 +36,8 @@ export default function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) 
         <FaBars size={24} />
       </button>
 
-      {/* Logo */}
       <h1 className="text-lg sm:text-2xl font-bold flex-grow">MyBank</h1>
       
-      {/* User Icon with Dropdown */}
       {user && (
         <div className="relative">
           <FaUserCircle
@@ -52,7 +46,6 @@ export default function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) 
             onClick={() => setDropdownOpen(!dropdownOpen)}
           />
           
-          {/* Dropdown Menu */}
           {dropdownOpen && (
             <div 
               className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-md p-2 z-50"

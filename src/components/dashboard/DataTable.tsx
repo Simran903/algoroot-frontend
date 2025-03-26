@@ -21,7 +21,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-// Mock data type
 interface DataItem {
   id: number;
   name: string;
@@ -116,7 +115,6 @@ export function DataTable() {
         />
       </div>
 
-      {/* Responsive Table */}
       <div className="overflow-x-auto">
         <Table className="min-w-full">
           <TableHeader className="bg-gray-100">
@@ -152,7 +150,6 @@ export function DataTable() {
         </Table>
       </div>
 
-      {/* Responsive Pagination */}
       <div className="flex justify-between items-center mt-4 bg-gray-50 p-3 rounded-b-lg text-sm sm:text-base">
         <div className="text-gray-700">
           Page {currentPage} of {totalPages} <span>({processedData.length} total results)</span>

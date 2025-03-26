@@ -4,7 +4,6 @@ import { FaTimes } from "react-icons/fa";
 export default function Sidebar({ mobile, onClose }: { mobile?: boolean, onClose?: () => void }) {
   return (
     <>
-      {/* Mobile Overlay */}
       {mobile && (
         <div 
           className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
@@ -12,7 +11,6 @@ export default function Sidebar({ mobile, onClose }: { mobile?: boolean, onClose
         />
       )}
 
-      {/* Sidebar */}
       <aside 
         className={`
           fixed top-0 left-0 w-64 bg-gray-200 p-4 h-full z-50 transform transition-transform duration-300

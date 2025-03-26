@@ -20,7 +20,6 @@ export default function Dashboard() {
     }
   }, [user, router]);
 
-  // Show nothing while checking authentication
   if (isLoading) {
     return null;
   }
