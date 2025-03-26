@@ -54,7 +54,7 @@ algoroot-frontend/
 
 1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/algoroot-frontend.git
+git clone https://github.com/Simran903/algoroot-frontend.git
 cd algoroot-frontend
 ```
 
