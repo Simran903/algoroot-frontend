@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Algoroot Frontend Task 🚀
 
-## Getting Started
+A **Next.js 15** application with user authentication and a dashboard featuring a data table with filtering and sorting capabilities. This project uses **TypeScript**, **Tailwind CSS**, and **ShadCN** for styling. User authentication is implemented using **localStorage** and **bcryptjs** for secure password encryption.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📁 **Folder Structure**
+```
+algoroot-frontend/
+│
+├── app/
+│   ├── (auth)/
+│   │   ├── login/page.tsx
+│   │   └── signup/page.tsx
+│   ├── dashboard/
+│   │   └── page.tsx
+|   ├── favicon.ico
+|   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── dashboard/
+│   │   ├── Navbar.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── DataTable.tsx
+│   └── ui/
+│       └── (ShadCN components)
+│
+├── context/
+│   └── AuthContext.tsx
+│
+├── lib/
+│   └── utils.ts
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── README.md
+└── .gitignore
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 **Tech Stack**
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS & ShadCN UI Components
+- **Authentication:** LocalStorage & bcryptjs for secure password encryption
+- **Icons:** React Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ **Setup and Installation**
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the Repository:**
+```bash
+git clone https://github.com/Simran903/algoroot-frontend.git
+cd algoroot-frontend
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies:**
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Install `bcryptjs`:**
+```bash
+npm install bcryptjs
+```
 
-## Deploy on Vercel
+4. **Run the Development Server:**
+```bash
+npm run dev
+```
+Visit **`http://localhost:3000`** to view the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔐 **Features**
+### **Authentication**
+- **Signup:** Register with email and encrypted password.
+- **Login:** Authenticate using the stored encrypted password.
+- **Password Security:** Passwords are hashed using **bcryptjs** before saving.
+
+### **Dashboard**
+- **Data Table:** Displays mock data with:
+  - **Sorting** (Ascending/Descending)
+  - **Filtering** (Search by name)
+  - **Pagination** (Limited rows per page)
+- **Navbar:** 
+  - Shows logged-in user details.
+  - User icon with a dropdown menu for:
+    - Logout
+    - Delete Account (removes from local storage)
+- **Sidebar:** Navigates to the **Details** page.
+
+---
+
+## 🔥 **Usage Instructions**
+1. **Signup:** Create an account on the Signup page.
+2. **Login:** Access the dashboard using registered credentials.
+3. **Delete Account:** Deletes user data permanently from local storage.
+
+---
+
+## 📂 **Environment Variables**
+No environment variables are required for this setup.
+
+---
+
+## 🛡️ **Security Considerations**
+- **bcryptjs** for hashing passwords.
+- LocalStorage is used for simplicity, but consider **HTTP-only cookies** for sensitive projects.
+
+---
+
+## 📬 **Contact**
+If you have any questions, feel free to reach out!
